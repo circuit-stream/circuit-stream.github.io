@@ -8,7 +8,7 @@
 	<style>
 		html,
 		body {
-			background: #ECBB68;
+			background: #000000;
 			width: 100%;
 			height: 100%;
 			overflow: visible;
@@ -43,13 +43,13 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<script src="Build/Web.loader.js"></script>
+		<script src="Build/Web2.loader.js"></script>
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/Web.data.br",
-				frameworkUrl: "Build/Web.framework.js.br",
-				codeUrl: "Build/Web.wasm.br",
+				dataUrl: "Build/Web2.data",
+				frameworkUrl: "Build/Web2.framework.js",
+				codeUrl: "Build/Web2.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "Circuit Stream",
 				productName: "Bowling",
@@ -75,15 +75,15 @@
 					w = window.innerWidth;
 					h = window.innerHeight;
 
-					var r = 600 / 960;
+					var r = 1080 / 1920;
 
 					if (w * r > window.innerHeight) {
 						w = Math.min(w, Math.ceil(h / r));
 					}
 					h = Math.floor(w * r);
 				} else {
-					w = 960;
-					h = 600;
+					w = 1920;
+					h = 1080;
 				}
 
 				container.style.width = canvas.style.width = w + "px";
