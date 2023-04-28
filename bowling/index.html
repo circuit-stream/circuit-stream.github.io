@@ -43,13 +43,13 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<script src="Build/Web3.loader.js"></script>
+		<script src="Build/web-non-urp-nobake.loader.js"></script>
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/Web3.data",
-				frameworkUrl: "Build/Web3.framework.js",
-				codeUrl: "Build/Web3.wasm",
+				dataUrl: "Build/web-non-urp-nobake.data",
+				frameworkUrl: "Build/web-non-urp-nobake.framework.js",
+				codeUrl: "Build/web-non-urp-nobake.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "Circuit Stream",
 				productName: "Bowling",
@@ -75,15 +75,15 @@
 					w = window.innerWidth;
 					h = window.innerHeight;
 
-					var r = 1080 / 1920;
+					var r = 600 / 960;
 
 					if (w * r > window.innerHeight) {
 						w = Math.min(w, Math.ceil(h / r));
 					}
 					h = Math.floor(w * r);
 				} else {
-					w = 1920;
-					h = 1080;
+					w = 960;
+					h = 600;
 				}
 
 				container.style.width = canvas.style.width = w + "px";
