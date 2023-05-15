@@ -57,7 +57,7 @@
 			};
 			var scaleToFit;
 			try {
-				scaleToFit = !!JSON.parse("true");
+				scaleToFit = !!JSON.parse("false");
 			} catch (e) {
 				scaleToFit = true;
 			}
@@ -82,8 +82,8 @@
 					}
 					h = Math.floor(w * r);
 				} else {
-					w = 960;
-					h = 600;
+					w = window.innerWidth;
+					h = window.innerHeight;
 				}
 
 				container.style.width = canvas.style.width = w + "px";
